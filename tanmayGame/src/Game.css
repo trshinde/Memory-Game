@@ -1,0 +1,53 @@
+.Game {
+  text-align: center;
+}
+
+.Game-header {
+  background-color: #f6b319;
+  height: 50px;
+  padding-top: 20px;
+  color: white;
+}
+
+.Game-header:hover {
+	color:blue;
+}
+
+.Game-title {
+  font-size: 25px;
+}
+
+.Game-status {
+  padding: 20px;  
+}
+
+.Game-status .Game-changing {
+	padding-top:12px;
+}
+
+.Game-status .Game-change {
+	padding-top:12px;
+	padding-bottom:12px;
+}
+
+.Game-intro {
+  font-size: large;
+}
+
+.Card {
+  display: inline-block;
+  border: 5px solid white;
+  margin-bottom: 5px;      
+  margin-left: 10px;  
+  width: 100px;    
+}
+
+.Matched {
+  border-color: #12cc97;
+}
+
+.CardContainer {
+  display: inline-block;
+  max-width: 750px;
+  margin: '20px auto';
+}

@@ -1,0 +1,25 @@
+'use strict';
+
+// environment variables are setup properly. 
+process.env.BABEL_ENV = 'test';
+process.env.NODE_ENV = 'test';
+process.env.PUBLIC_URL = '';
+
+//error un-handling which will terminate the node.js process without non-zero exit code. 
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
+// Ensure environment variables are read.
+require('../config/env');
+
+const jest = require('jest');
+const argv = process.argv.slice(2);
+
+// Watch unless on CI or in coverage mode
+if (!process.env.CI && argv.indexOf('--coverage') < 0) {
+  argv.push('--watch');
+}
+
+
+jest.run(argv);
